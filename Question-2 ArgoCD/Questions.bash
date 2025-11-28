@@ -8,4 +8,4 @@
 # 3. Ensure that CRDs are not installed by configuring the chart accordingly
 # 4. Save the generated YAML manifest to /root/argo-helm.yaml
 
-# Video link
+# Video link - https://youtu.be/e0YGRSjb8CU
