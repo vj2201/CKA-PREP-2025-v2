@@ -5,7 +5,8 @@ echo "🚀 Setting up Kubernetes Gateway API migration lab..."
 
 # 1. Install Gateway API CRDs (official source)
 echo "📦 Installing Gateway API CRDs..."
-kubectl apply -k "github.com/kubernetes-sigs/gateway-api/config/crd?ref=v1.1.0" >/dev/null
+CRD_VERSION="v1.5.0"
+kubectl apply -f "https://github.com/kubernetes-sigs/gateway-api/releases/download/$CRD_VERSION/standard-install.yaml" >/dev/null
 
 # 2. Deploy a simple nginx web app
 cat <<EOF | kubectl apply -f -
