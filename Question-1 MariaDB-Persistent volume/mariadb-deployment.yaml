@@ -18,6 +18,9 @@ spec:
       containers:
       - name: mariadb
         image: mariadb:10.5
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: mypassword
         volumeMounts:
         - name: mariadb-storage
           mountPath: /var/lib/mysql
